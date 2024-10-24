@@ -8,13 +8,23 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Menu</li>
-            <li class="{{ Route::is('admin.dashboard') ? 'active' : '' }}"><a class="nav-link"
-                    href="{{ route('admin.dashboard') }}"><i class="fas fa-home"></i> <span>
-                        Dashboard</span></a>
+            <li class="{{ Route::is('admin.dashboard') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.dashboard') }}">
+                    <i class="fas fa-home"></i> <span>Dashboard</span>
+                </a>
             </li>
-            <li class="{{ Request::is('product*') ? 'active' : '' }}">
+            <li class="{{ Request::is('products') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.product') }}"><i class="fas fa-box"></i>
                     <span>Produk</span></a>
+            </li>
+            <li class="{{ Request::is('admin.flashsale') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.flashsale') }}"><i class="fas fa-percentage"></i>
+                    <span>Diskon</span></a>
+            </li>
+            <li class="{{ Request::is('admin.distributor') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.distributor') }}"><i class="fas fa-briefcase"></i>
+
+                    <span>Distributor</span></a>
             </li>
         </ul>
     </aside>

@@ -16,9 +16,8 @@
         <div class="row mt-4">
             <div class="col-12 col-md-4 col-lg-12 m-auto">
                 <article class="article article-style-c">
-                    <div class="article-header">
-                        <div class="article-image" data-background="{{ asset('images/' . $product->image) }}">
-                        </div>
+                    <div class="col-md-6">
+                        <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->image }}" class="img-fluid rounded">
                     </div>
                     <div class="article-details">
                         <div class="article-category"><a href="#">{{ $product->name }}</a>

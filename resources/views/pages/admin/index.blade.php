@@ -28,7 +28,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
-                    <div class="card-icon bg-danger">
+                    <div class="card-icon bg-info">
                         <i class="far fa-newspaper"></i>
                     </div>
                     <div class="card-wrap">
@@ -37,6 +37,36 @@
                         </div>
                         <div class="card-body">
                             {{ $products }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-danger">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total Diskon</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $flashsales }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-warning">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total Distributor</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ $distributors }}
                         </div>
                     </div>
                 </div>

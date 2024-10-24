@@ -35,24 +35,26 @@ class AuthController extends Controller
         }
     }
 
-    public function adminLogout()
+    public function admin_Logout()
     {
         Auth::guard('admin')->logout();
         toast('Berhasil logout!', 'success');
         return redirect('/');
     }
 
-    public function userLogout()
+    public function user_Logout()
     {
         Auth::logout();
         toast('Berhasil logout!', 'success');
         return redirect('/');
     }
-    public function register(){
+    public function register()
+    {
         return view('register');
     }
 
-    public function post_register(Request $request){
+    public function post_register(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email:dns',
@@ -63,14 +65,14 @@ class AuthController extends Controller
             Alert::error('Gagal!', 'Pastikan semua terisi dengan benar!');
             return redirect()->back();
         }
-        
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'point' => 10000,
         ]);
-        
+
         if ($user) {
             Alert::success('Berhasil!', 'Akun baru berhasil dibuat, silahkan melakukan login!');
             return redirect('/');

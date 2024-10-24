@@ -47,7 +47,8 @@ CSS ============================================= -->
                 <div class="col-lg-6">
                     <div class="login_form_inner">
                         <h3>Register new account</h3>
-                        <form class="row login_form" action="{{route('post.register') }}" method="POST" id="contactForm" novalidate="novalidate">
+                        <form class="row login_form" action="{{route('post.register') }}" method="POST" id="contactForm"
+                            novalidate="novalidate">
                             @csrf
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Name"
@@ -59,7 +60,8 @@ CSS ============================================= -->
                             </div>
                             <div class="col-md-12 form-group">
                                 <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Password" onfocus="this.placeholder =''" onblur="this.placeholder = 'Password'">
+                                    placeholder="Password" onfocus="this.placeholder =''"
+                                    onblur="this.placeholder = 'Password'">
                             </div>
                             <div class="col-md-12 form-group">
                                 <button type="submit" value="submit" class="primary-btn">Create Account</button>
@@ -72,7 +74,9 @@ CSS ============================================= -->
     </section>
     <!--================End Login Box Area =================-->
     <script src="{{ asset('assets/templates/user/js/vendor/jquery-2.2.4.min.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
     <script src="{{ asset('assets/templates/user/js/vendor/bootstrap.min.js') }}">
     </script>
     <script src="{{ asset('assets/templates/user/js/jquery.ajaxchimp.min.js')}}"></script>
